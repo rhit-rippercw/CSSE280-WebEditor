@@ -1,0 +1,12 @@
+document.getElementById("likeForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  
+  const response = document.querySelector('input[name="like"]:checked').value;
+  const responseText = document.getElementById("response");
+  
+  if (response === "yes") {
+    responseText.textContent = "Yay! 😊";
+  } else {
+    responseText.textContent = "Oh no! 😢";
+  }
+});
